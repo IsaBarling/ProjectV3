@@ -1,0 +1,101 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Медицинская клиника</title>
+</head>
+
+<body>
+
+  <header>
+        <div class="navbar">
+      <div class="logo">
+
+      </div>
+      <nav>
+        <nav class="nav-links">
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'about' %}">О нас</a>
+        <a href="{% url 'contact' %}">Контакты</a>
+        <a href="{% url 'login' %}">Логин</a>
+
+          {% for m in menu %}
+
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    </header>
+
+
+<style>
+ body {
+     font-family: Arial;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .doctors {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 50px 0;
+  }
+
+  .doctor {
+    width: 45%;
+    text-align: center;
+  }
+
+  .doctor img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+</style>
+
+<body>
+
+  <header>
+    <h1>Наша клиника</h1>
+  </header>
+
+  <main>
+    <h2>Лучшие врачи</h2>
+
+    <div class="doctors">
+
+      <div class="doctor">
+        <img src="{% static 'dr_house.jpg' %}">
+        <p>Грегори Хаус</p>
+      </div>
+
+      <div class="doctor">
+        <img src="{% static 'dr_wilson.jpg' %}">
+        <p>Джеймс Вилсон</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; {{ year }} Мой Веб-сайт by Maria Fomina</p>
+  </footer>
+
+</body>
+</html>

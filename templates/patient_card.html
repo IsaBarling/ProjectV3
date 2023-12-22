@@ -1,0 +1,17 @@
+
+
+
+<!-- patient_card.html -->
+<h1>Медицинская карта</h1>
+<p>Имя пациента: {{ object.patient.first_name }}</p>
+<p>Фамилия пациента: {{ object.patient.last_name }}</p>
+<p>Дата рождения: {{ object.patient.birthday_date }}</p>
+<p>Диагноз: {{ object.diagnosis }}</p>
+<p>Рекомендации: {{ object.recommendations }}</p>
+
+
+<!-- Форма поиска пациентов -->
+<form method="GET">
+  {{ patient_search_form.as_p }}
+  <button type="submit">Найти</button>
+</form>

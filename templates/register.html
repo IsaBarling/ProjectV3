@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация</title>
+  <style>
+    body {
+      background-color: #f8f8f8;
+      font-family: Arial;
+    }
+
+    .form {
+      background: #fff;
+      max-width: 360px;
+      margin: 60px auto;
+      padding: 45px;
+      border-radius: 5px;
+    }
+
+    h1 {
+      margin: 0 0 30px;
+      text-align: center;
+    }
+
+    .form-control {
+      width: 100%;
+      border: 1px solid #ddd;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    label {
+      font-weight: 500;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .btn {
+      background: #1e6bff;
+      border: 0;
+      padding: 12px 20px;
+      color: #fff;
+    }
+
+  </style>
+</head>
+
+<body>
+  <form method="post" class="form">
+    {% csrf_token %}
+    <h1>Регистрация</h1>
+
+    {{ form.as_p }}
+
+    <button type="submit" class="btn">Зарегистрироваться</button>
+  </form>
+</body>
+</html>
